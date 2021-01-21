@@ -1,0 +1,53 @@
+<div class="row animated fadeIn fast">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form class="form" (ngSubmit)="buscarAlumno()" [formGroup]="historialAlumnoform">
+                    <div class="form-group row">
+                        <div class="col-10">
+                            <input class="form-control" type="search" formControlName="nombre" id="example-search-input" placeholder="Buscar alumno por nombre">
+                        </div>
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Buscar</button>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Historial de alumnos</h4>
+                <h6 class="card-subtitle">x</h6>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Materia</th>
+                                <th>Calificación</th>
+                                <th>Semestre</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let alumno of historial">
+                                <td>{{alumno.NOMBRE}}</td>
+                                <td>{{alumno.APELLIDO_MAT}}</td>
+                                <td>{{alumno.MATERIA}}</td>
+                                <td>{{alumno.CALIFICACION}}</td>
+                                <td>{{alumno.SEMESTRE}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

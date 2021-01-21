@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/income.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-muted m-t-10 m-b-0">Materia más reprobada</h6>
+                        <h2 class="m-t-10 " *ngFor="let materia of materiaReprobada">{{materia.NOMBRE_MATERIA}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/expense.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-muted m-t-10 m-b-0">Empleados</h6>
+                        <h2 class="m-t-0">{{this.totalEmpleados}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/assets.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-muted m-t-10 m-b-0">Alumnos inscritos</h6>
+                        <h2 class="m-t-0">{{this.totalAlumnos}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="m-r-20 align-self-center"><img src="../assets/images/icon/staff.png" alt="Income"></div>
+                    <div class="align-self-center">
+                        <h6 class="text-muted m-t-10 m-b-0">Profesores Activos</h6>
+                        <h2 class="m-t-0">{{this.totalProfesores}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg">
+        <div class="card" *ngFor="let promedio of bestAVG">
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-body little-profile text-center">
+                        <div class="pro-img m-t-20"><img src="../assets/images/users/4.jpg" alt="user"></div>
+                        <h6 class="text-muted">Mejor Promedio</h6>
+                        <h3 class="m-b-0">{{promedio.NOMBRE}} {{promedio.APELLIDO_PAT}}</h3>
+                    </div>
+                    <div class="text-center bg-light">
+                        <div class="row">
+                            <div class="col-6  p-20 b-r">
+                                <h4 class="m-b-0 font-medium">Promedio</h4>
+                            </div>
+                            <div class="col-6  p-20">
+                                <h4 class="m-b-0 font-medium">{{promedio.PROMEDIO}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body text-center">
+                <h4>"Esfuérzate, no para ser un éxito, sino más bien para ser de valor"</h4>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
