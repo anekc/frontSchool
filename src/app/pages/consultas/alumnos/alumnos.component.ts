@@ -53,4 +53,14 @@ export class AlumnosComponent implements OnInit {
     }
 
   });
-}}
+}
+
+editAlumno = (alumnos) => {
+this.AS.actualizarhospital(alumnos).subscribe(
+  resp => {
+    Swal.fire('Actualizado', alumnos.Nombre, 'success');
+  }
+);
+}
+
+}

@@ -17,6 +17,7 @@ import { ProfesoresComponent } from './consultas/profesores/profesores.component
 import { MateriasComponent } from './consultas/materias/materias.component';
 import { EmpleadosComponent } from './consultas/empleados/empleados.component';
 import { AgregarempleadoComponent } from './agregarempleado/agregarempleado.component';
+import { GruposComponent } from './consultas/grupos/grupos.component';
 const routes: Routes = [
   {path: 'dashboard',
    component: PagesComponent,
@@ -38,7 +39,8 @@ const routes: Routes = [
     {path: 'historial', component: HistorialAlumnoComponent, data: {titulo: 'Historial de Alumno'}},
     {path: 'profesores', component: ProfesoresComponent, data: {titulo: 'Profesores'}},
     {path: 'empleados', component: EmpleadosComponent, data: {titulo: 'Empleados'}},
-    {path: 'materias', component: MateriasComponent, data: {titulo: 'Materias'}}
+    {path: 'materias', component: MateriasComponent, data: {titulo: 'Materias'}},
+    {path: 'grupos', component: GruposComponent, data: {titulo: 'Grupos'}}
    ]
   },
 

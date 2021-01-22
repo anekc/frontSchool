@@ -24,6 +24,7 @@ import { ProfesoresComponent } from './consultas/profesores/profesores.component
 import { MateriasComponent } from './consultas/materias/materias.component';
 import { EmpleadosComponent } from './consultas/empleados/empleados.component';
 import { AgregarempleadoComponent } from './agregarempleado/agregarempleado.component';
+import { GruposComponent } from './consultas/grupos/grupos.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { AgregarempleadoComponent } from './agregarempleado/agregarempleado.comp
     MateriasComponent,
     EmpleadosComponent,
     AgregarempleadoComponent,
+    GruposComponent,
   ],
    exports: [
     PagesComponent,

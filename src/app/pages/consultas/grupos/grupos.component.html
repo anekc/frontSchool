@@ -1,0 +1,48 @@
+<div class="row animated fadeIn fast">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <input type="text" class="form-control" placeholder="Buscar alumno">
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Reporte de Grupos</h4>
+            <h6 class="card-subtitle">Número de grupos ({{this.totalGrupos}})</h6>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Carrera</th>
+                            <th>Semestre</th>
+                            <th>Turno</th>
+
+                            <th class="text-nowrap">Accciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let grupo of grupos">
+                            <td>{{grupo.GRUPO}}</td>
+                            <td>{{grupo.NOMBRE_CARRERA}}</td>
+                            <td>{{grupo.NUMERO_SEMESTRE}}</td>
+                            <td>{{grupo.NOMBRE_TURNO}}</td>
+
+                            <td class="text-nowrap">
+                                <a data-toggle="tooltip" data-original-title="Editar"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                <a data-toggle="tooltip" data-original-title="Borrar" (click)="eliminarAlumno(alumno)" class="cursor"> <i class="fa fa-close text-danger"></i> </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
