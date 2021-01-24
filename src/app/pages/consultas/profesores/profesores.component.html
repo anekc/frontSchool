@@ -7,6 +7,7 @@
                     <thead>
                         <tr>
                             <th>Nombre</th>
+                            <th>Apellido Paterno</th>
                             <th>Apellido Materno</th>
                             <th>Edad</th>
                             <th>Correo Electrónico</th>
@@ -15,14 +16,15 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let profesor of profesores">
-                            <td>{{profesor.NOMBRE}}</td>
-                            <td>{{profesor.APELLIDO_MAT}}</td>
-                            <td>{{profesor.EDAD}}</td>
-                            <td>{{profesor.CORREO_ELECTRONICO}}</td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=profesor.NOMBRE></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=profesor.APELLIDO_PAT></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=profesor.APELLIDO_MAT></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=profesor.EDAD></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=profesor.CORREO_ELECTRONICO></td>
 
                             <td class="text-nowrap">
-                                <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                <a (click)="editProfesor(profesor)" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                <a data-toggle="tooltip" data-original-title="Close" (click)="eliminarProfesor(profesor)"> <i class=" fa fa-close text-danger "></i> </a>
                             </td>
                         </tr>
                     </tbody>

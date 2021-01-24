@@ -30,4 +30,15 @@ export class ProfesoresService {
 
   }
 
+  eliminarProfesor = ( profesores) => {
+    const url = `${base_url}/profesores/${ profesores.ID_PROFESOR }`;
+    return this.http.delete(url);
+  }
+
+  actualizarProfesor = ({ID_PROFESOR, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, CORREO_ELECTRONICO}) => {
+    const url = `${base_url}/profesores/${ ID_PROFESOR }`;
+    return this.http.put(url, {ID_PROFESOR, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, CORREO_ELECTRONICO} );
+
+  }
+
 }

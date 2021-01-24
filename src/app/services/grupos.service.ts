@@ -26,4 +26,15 @@ export class GruposService {
 
   }
 
+  eliminarGrupo = ( grupos) => {
+    const url = `${base_url}/grupo/${ grupos.ID_GRUPO }`;
+    return this.http.delete(url);
+  }
+
+  actualizarGrupo = ({ID_GRUPO, GRUPO, NOMBRE_CARRERA, NUMERO_SEMESTRE}) => {
+    const url = `${base_url}/grupo/${ ID_GRUPO }`;
+    return this.http.put(url, {ID_GRUPO, GRUPO, NOMBRE_CARRERA, NUMERO_SEMESTRE} );
+
+  }
+
 }

@@ -38,9 +38,10 @@ export class AlumnoService {
     return this.http.delete(url);
   }
 
-  actualizarhospital = (alumnos) => {
-    const url = `${base_url}/alumnos/${ alumnos.ID_ALUMNO }`;
-    return this.http.put(url, alumnos);
+  actualizarAlumno = ({ID_ALUMNO, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, CORREO_ELECTRONICO}) => {
+    const url = `${base_url}/alumnos/${ ID_ALUMNO }`;
+    return this.http.put(url, {ID_ALUMNO, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, CORREO_ELECTRONICO} );
+
   }
 }
 

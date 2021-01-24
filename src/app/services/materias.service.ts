@@ -25,4 +25,15 @@ export class MateriasService {
     const url = `${base_url}/empleados`;
     return this.http.get<any>(url);
   }
+
+  eliminarMateria = ( materias) => {
+    const url = `${base_url}/materias/${ materias.ID_MATERIA }`;
+    return this.http.delete(url);
+  }
+
+  actualizarMateria = ({ID_MATERIA, NOMBRE_MATERIA}) => {
+    const url = `${base_url}/materias/${ ID_MATERIA }`;
+    return this.http.put(url, {ID_MATERIA, NOMBRE_MATERIA} );
+
+  }
 }

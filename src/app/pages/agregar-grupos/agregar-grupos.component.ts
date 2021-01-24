@@ -35,7 +35,7 @@ export class AgregarGruposComponent implements OnInit {
       Swal.fire({
         position: 'top-end',
         icon: 'success',
-        title: 'El alumno ha sido agregado correctamente',
+        title: 'El grupo ha sido agregado correctamente',
         showConfirmButton: false,
         timer: 2500
       });

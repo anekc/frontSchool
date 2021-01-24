@@ -7,26 +7,28 @@
                     <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
                             <th>Edad</th>
-                            <th>Email</th>
                             <th>Departamento</th>
+                            <th>Email</th>
+
 
                             <th class="text-nowrap">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let empleado of empleados">
-                            <td>{{empleado.NOMBRE}}</td>
-                            <td>{{empleado.APELLIDO_MAT}}</td>
-                            <td>{{empleado.EDAD}}</td>
-                            <td>{{empleado.CORREO_ELECTRONICO}}</td>
-                            <td>{{empleado.DEPARTAMENTO}}</td>
-
+                            <td> <input type="text " class="form-control " [(ngModel)]=empleado.NOMBRE> </td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=empleado.APELLIDO_PAT></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=empleado.APELLIDO_MAT></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=empleado.EDAD></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=empleado.DEPARTAMENTO></td>
+                            <td> <input type="text " class="form-control " [(ngModel)]=empleado.CORREO_ELECTRONICO></td>
 
                             <td class="text-nowrap">
-                                <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                <a (click)="editEmpleado(empleado)" data-toggle=" tooltip " data-original-title="Edit "> <i class="fa fa-pencil text-inverse m-r-10 "></i> </a>
+                                <a (click)="eliminarEmpleado(empleado)" data-toggle="tooltip " data-original-title="Close "> <i class="fa fa-close text-danger "></i> </a>
                             </td>
                         </tr>
                     </tbody>

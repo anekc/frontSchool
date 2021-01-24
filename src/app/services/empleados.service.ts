@@ -15,6 +15,18 @@ export class EmpleadosService {
   crearEmpleado = (formData: AddEmpleadoForm) => {
     return this.http.post(`${base_url}/empleados`, formData);
   }
+
+
+  eliminarEmpleado = ( empleados) => {
+    const url = `${base_url}/empleados/${ empleados.ID_EMPLEADO }`;
+    return this.http.delete(url);
+  }
+
+  actualizarEmpleado = ({ID_EMPLEADO, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, DEPARTAMENTO, CORREO_ELECTRONICO}) => {
+    const url = `${base_url}/empleados/${ ID_EMPLEADO }`;
+    return this.http.put(url, {ID_EMPLEADO, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, DEPARTAMENTO, CORREO_ELECTRONICO} );
+
+  }
 }
 
 

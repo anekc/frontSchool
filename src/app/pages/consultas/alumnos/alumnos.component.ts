@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 })
 export class AlumnosComponent implements OnInit {
   public totalUsuarios = 0;
-  public alumnos: Alumno[];
+  public alumnos = [];
   constructor(private AS: AlumnoService) {
     this.alumnos = new Array<Alumno>();
     console.log(this.alumnos);
@@ -55,12 +55,13 @@ export class AlumnosComponent implements OnInit {
   });
 }
 
-editAlumno = (alumnos) => {
-this.AS.actualizarhospital(alumnos).subscribe(
+editAlumno = ({ID_ALUMNO, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, CORREO_ELECTRONICO}) => {
+this.AS.actualizarAlumno({ID_ALUMNO, NOMBRE, APELLIDO_PAT, APELLIDO_MAT, EDAD, CORREO_ELECTRONICO}).subscribe(
   resp => {
-    Swal.fire('Actualizado', alumnos.Nombre, 'success');
+    Swal.fire('Actualizado', `${NOMBRE} ${APELLIDO_PAT}` , 'success');
   }
 );
 }
+
 
 }

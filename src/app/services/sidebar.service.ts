@@ -10,10 +10,6 @@ export class SidebarService {
     icono: 'mdi mdi-account-convert',
     submenu: [
       { titulo: 'Vista General', url: ''},
-      { titulo: 'ProgressBar', url: 'progress'},
-      { titulo: 'Gráficas', url: 'grafica1'},
-      { titulo: 'Promesas', url: 'promesas'},
-      { titulo: 'RXJS', url: 'rxjs'},
       { titulo: 'Alumnos', url: 'agregarAlumno'},
       { titulo: 'Profesores', url: 'agregarProfesor'},
       { titulo: 'Empleados', url: 'agregarEmpleados'},

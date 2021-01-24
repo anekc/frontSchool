@@ -1,16 +1,16 @@
 export class Alumno {
   public idalumno: number;
-  public nombre: string;
-  public apellidopat: string;
-  public apellidomat: string;
-  public edad: number;
+  public name: string;
+  public lastname: string;
+  public surname: string;
+  public age: number;
   public email: string;
   constructor() {
     this.idalumno = 0;
-    this.nombre = '';
-    this.apellidopat = '';
-    this.apellidomat = '';
-    this.edad = 1;
+    this.name = '';
+    this.lastname = '';
+    this.surname = '';
+    this.age = 1;
     this.email = '';
   }
 }
